@@ -8,7 +8,7 @@ output:
 
 In this project, I analyzed the data from a personal activity monitoring device. This device collects data at 5 minute intervals through out the day. The data consists of two months of data from an anonymous individual collected during the months of October and November, 2012 and include the number of steps taken in 5 minute intervals each day.
 
-###1. Loading and preprocessing the data
+##1. Loading and preprocessing the data
 
 The data is loaded using following codes. The format of the data is already easy for analysis, hence no transformation of the data is carried out.
 
@@ -19,7 +19,7 @@ head(data)
 ```
 
 
-###2.  What is mean total number of steps taken per day?
+##2.  What is mean total number of steps taken per day?
 
 Using the aggregate function to get the total number of steps taken per day and relabel the result.
 ```{r}
@@ -38,7 +38,7 @@ mean(result$tot_steps)
 median(result$tot_steps)
 ```
 
-###3.  What is the average daily activity pattern?
+##3.  What is the average daily activity pattern?
 
 
 Using the aggregate function to get the average number of steps taken for every 5-minute interval:
@@ -59,7 +59,7 @@ Which 5-minute interval, on average across all the days in the dataset, contains
 result2$interval[which.max(result2$avg_steps)]
 ```
 
-###4. Imputing missing values 
+##4. Imputing missing values 
 
 Calculate and report the total number of missing values in the dataset:
 ```{r}
@@ -87,7 +87,7 @@ median(result3$tot_steps)
 
 The values only differ a little from the estimates from the first part of the assignment. Since I filled in the averge value for number of steps taken at certain interval, imputing missing data only have very small  impact  on the estimates of the total daily number of steps.
 
-###5. Are there differences in activity patterns between weekdays and weekends?
+##5. Are there differences in activity patterns between weekdays and weekends?
 
 Create a new factor variable in the dataset with two levels – “weekday” and “weekend” indicating whether a given date is a weekday or weekend day.
 ```{r}
