@@ -1,4 +1,9 @@
-# Reproducible Research: Peer Assessment 1
+---
+title: "Reproducible Research: Peer Assessment 1"
+output: 
+  html_document:
+    keep_md: true
+---
 
 
 In this project, I analyzed the data from a personal activity monitoring device. This device collects data at 5 minute intervals through out the day. The data consists of two months of data from an anonymous individual collected during the months of October and November, 2012 and include the number of steps taken in 5 minute intervals each day.
@@ -40,7 +45,7 @@ Make a histogram of the total number of steps taken each day:
 hist(result$tot_steps, xlab="Total Number of Steps per Day", main="Histogram of Total Number of Steps per Day")
 ```
 
-![plot of chunk unnamed-chunk-3](./PA1_template_files/figure-html/unnamed-chunk-3.png) 
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3.png) 
 
 Calculate the mean and median total number of steps taken per day:
 
@@ -77,7 +82,7 @@ Make a time series plot of the 5-minute interval (x-axis) and the average number
 plot(result2$interval, result2$avg_steps, type="l", xlab="5-minute Interval Identifier", ylab="Average Number of Steps", main="Average Daily Activity Pattern")
 ```
 
-![plot of chunk unnamed-chunk-6](./PA1_template_files/figure-html/unnamed-chunk-6.png) 
+![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6.png) 
 
 Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -117,7 +122,7 @@ names(result3) = c("date","tot_steps")
 hist(result3$tot_steps, xlab="Total Number of Steps per Day", main="Histogram of Total Number of Steps per Day")
 ```
 
-![plot of chunk unnamed-chunk-10](./PA1_template_files/figure-html/unnamed-chunk-10.png) 
+![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10.png) 
 
 Mean and median of total number of steps taken per day:
 
@@ -166,4 +171,4 @@ library(ggplot2)
 qplot(interval,steps,data=result4,facets=day_type~.,geom="line", xlab="5-minute Interval Identifier", ylab="Number of Steps")
 ```
 
-![plot of chunk unnamed-chunk-13](./PA1_template_files/figure-html/unnamed-chunk-13.png) 
+![plot of chunk unnamed-chunk-13](figure/unnamed-chunk-13.png) 
